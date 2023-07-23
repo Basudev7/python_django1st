@@ -3,9 +3,14 @@ from .models import Patient
 from .forms import PatientForm
 from django.http import HttpResponse
 
-def all_patients(request):
-    response_content = "Hello, this is the response content!"
-    return HttpResponse(response_content)
+def home(request):
+    # response_content = "Hello, this is the response content!"
+
+    # return HttpResponse(response_content)
+    context = {
+        'title':"We Cure"
+    }
+    return render(request,'Patients/index.html',context)
 
 def patient_form(request):
     if request.method == 'POST':

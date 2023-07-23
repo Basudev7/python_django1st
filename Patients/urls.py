@@ -5,5 +5,5 @@ app_name = "Patients"
 
 urlpatterns = [
     path('patient_form',patient_form,name="patient_form"),
-    path('',all_patients, name="all")
+    path('',home, name="all")
 ]
